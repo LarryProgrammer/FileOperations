@@ -17,19 +17,19 @@ public class HighestScore {
     public static void main(String[] args) {
         try {
             Scanner file = new Scanner(new File("gamescore.txt"));
-            int max = file.nextInt();
+            int highest = file.nextInt();
 
             while (file.hasNext()) {
                 int score = file.nextInt();
 
-                if(score > max) {
-                    max = score;
+                if(score > highest) {
+                    highest = score;
                 }
                 System.out.println(score);
             }
             file.close();
 
-            System.out.println("The highest score in the file is: " + max);
+            System.out.println("The highest score in the file is: " + highest);
         }
         catch(Exception e) {
             System.out.println(e.getMessage());
